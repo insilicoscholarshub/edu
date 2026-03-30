@@ -741,119 +741,180 @@
     </div>
   </section>
 
+ <!-- ================================================================
+     SERVICES SECTION — With Your Custom Analysis Images
+     ================================================================ -->
+<section id="services" class="py-24 md:py-32 relative">
+  <!-- Background accent -->
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/20 to-transparent pointer-events-none"></div>
 
-  <!-- ================================================================
-       SERVICES SECTION — সার্ভিস তালিকা পরিবর্তন করতে পারো
-       ================================================================ -->
-  <section id="services" class="py-24 md:py-32 relative">
-    <!-- Background accent -->
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/20 to-transparent pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16 reveal">
+      <span class="text-xs font-semibold tracking-widest uppercase text-brand-400 mb-4 block">Our Services</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+        What We <span class="gradient-text">Offer</span>
+      </h2>
+      <div class="section-divider"></div>
+      <p class="text-slate-400 mt-6 max-w-2xl mx-auto">
+        Comprehensive MD simulation services tailored for research publications, thesis work, and drug discovery projects.
+      </p>
+    </div>
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <div class="text-center mb-16 reveal">
-        <span class="text-xs font-semibold tracking-widest uppercase text-brand-400 mb-4 block">Our Services</span>
-        <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
-          What We <span class="gradient-text">Offer</span>
-        </h2>
-        <div class="section-divider"></div>
-        <p class="text-slate-400 mt-6 max-w-2xl mx-auto">
-          Comprehensive MD simulation services tailored for research publications, thesis work, and drug discovery projects.
-        </p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Service Card 1 -->
-        <div class="glass-card rounded-2xl p-8 reveal">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Service Card 1: MD Simulation -->
+      <div class="glass-card rounded-2xl p-6 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-4">
           <div class="analysis-icon">
             <span class="iconify" data-icon="mdi:timer-sand"></span>
           </div>
-          <h3 class="text-lg font-semibold text-white mb-3">MD Simulation (up to 500ns)</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Full production-run molecular dynamics simulation using GROMACS with proper equilibration, 
-            minimization, and production phases up to 500 nanoseconds.
-          </p>
-          <div class="mt-6 pt-4 border-t border-white/5">
-            <span class="text-xs font-mono text-brand-400/60">GROMACS • .xtc • .trr</span>
-          </div>
+          <h3 class="text-lg font-semibold text-white">MD Simulation (up to 500ns)</h3>
         </div>
+        
+        <!-- YOUR IMAGE HERE: Replace src with your actual simulation trajectory/preview image -->
+        <div class="mb-4 rounded-lg overflow-hidden border border-brand-600/20 bg-brand-950/30 aspect-video flex items-center justify-center">
+          <img src="images/analysis/md_simulation_preview.png" 
+               alt="MD Simulation Preview" 
+               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: md_simulation_preview.png</span>'">
+        </div>
+        
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+          Full production-run molecular dynamics simulation using GROMACS with proper equilibration, minimization, and production phases up to 500 nanoseconds.
+        </p>
+        <div class="pt-3 border-t border-white/5">
+          <span class="text-xs font-mono text-brand-400/60">GROMACS • .xtc • .trr • .gro</span>
+        </div>
+      </div>
 
-        <!-- Service Card 2 -->
-        <div class="glass-card rounded-2xl p-8 reveal delay-100">
+      <!-- Service Card 2: RMSD / RMSF Analysis -->
+      <div class="glass-card rounded-2xl p-6 reveal delay-100 hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-4">
           <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(16,185,129,0.05)); border-color: rgba(16,185,129,0.2); color: #34d399;">
             <span class="iconify" data-icon="mdi:chart-bell-curve-cumulative"></span>
           </div>
-          <h3 class="text-lg font-semibold text-white mb-3">RMSD / RMSF Analysis</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Root Mean Square Deviation and Fluctuation analysis with high-resolution publication-quality plots 
-            showing protein stability and residue-level flexibility.
-          </p>
-          <div class="mt-6 pt-4 border-t border-white/5">
-            <span class="text-xs font-mono text-emerald-400/60">.xvg • 300 DPI PNG</span>
-          </div>
+          <h3 class="text-lg font-semibold text-white">RMSD / RMSF Analysis</h3>
         </div>
+        
+        <!-- YOUR IMAGE HERE: Replace with your actual RMSD/RMSF plot -->
+        <div class="mb-4 rounded-lg overflow-hidden border border-emerald-600/20 bg-emerald-950/30 aspect-video flex items-center justify-center">
+          <img src="images/analysis/rmsd_rmsf_plot.png" 
+               alt="RMSD RMSF Analysis Plot" 
+               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: rmsd_rmsf_plot.png</span>'">
+        </div>
+        
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+          Root Mean Square Deviation and Fluctuation analysis with high-resolution publication-quality plots showing protein stability and residue-level flexibility.
+        </p>
+        <div class="pt-3 border-t border-white/5">
+          <span class="text-xs font-mono text-emerald-400/60">.xvg • 300 DPI PNG • PDF</span>
+        </div>
+      </div>
 
-        <!-- Service Card 3 -->
-        <div class="glass-card rounded-2xl p-8 reveal delay-200">
+      <!-- Service Card 3: SASA Analysis -->
+      <div class="glass-card rounded-2xl p-6 reveal delay-200 hover:shadow-lg hover:shadow-amber-500/10 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-4">
           <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(245,158,11,0.05)); border-color: rgba(245,158,11,0.2); color: #fbbf24;">
             <span class="iconify" data-icon="mdi:sphere"></span>
           </div>
-          <h3 class="text-lg font-semibold text-white mb-3">SASA Analysis</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Solvent Accessible Surface Area analysis to evaluate hydrophobic/hydrophilic surface exposure 
-            changes during simulation trajectory.
-          </p>
-          <div class="mt-6 pt-4 border-t border-white/5">
-            <span class="text-xs font-mono text-amber-400/60">Per-residue • Total SASA</span>
-          </div>
+          <h3 class="text-lg font-semibold text-white">SASA Analysis</h3>
         </div>
+        
+        <!-- YOUR IMAGE HERE: Replace with your actual SASA plot -->
+        <div class="mb-4 rounded-lg overflow-hidden border border-amber-600/20 bg-amber-950/30 aspect-video flex items-center justify-center">
+          <img src="images/analysis/sasa_plot.png" 
+               alt="SASA Analysis Plot" 
+               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: sasa_plot.png</span>'">
+        </div>
+        
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+          Solvent Accessible Surface Area analysis to evaluate hydrophobic/hydrophilic surface exposure changes during simulation trajectory.
+        </p>
+        <div class="pt-3 border-t border-white/5">
+          <span class="text-xs font-mono text-amber-400/60">Per-residue • Total SASA • Time-series</span>
+        </div>
+      </div>
 
-        <!-- Service Card 4 -->
-        <div class="glass-card rounded-2xl p-8 reveal delay-100">
+      <!-- Service Card 4: Distance Analysis -->
+      <div class="glass-card rounded-2xl p-6 reveal delay-100 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-4">
           <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(168,85,247,0.05)); border-color: rgba(168,85,247,0.2); color: #a855f7;">
             <span class="iconify" data-icon="mdi:arrow-collapse-horizontal"></span>
           </div>
-          <h3 class="text-lg font-semibold text-white mb-3">Distance Analysis</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Inter-atomic and inter-residue distance measurements throughout the simulation to track 
-            conformational changes and binding interactions.
-          </p>
-          <div class="mt-6 pt-4 border-t border-white/5">
-            <span class="text-xs font-mono text-purple-400/60">Pairwise • Time-series</span>
-          </div>
+          <h3 class="text-lg font-semibold text-white">Distance Analysis</h3>
         </div>
+        
+        <!-- YOUR IMAGE HERE: Replace with your actual distance analysis plot -->
+        <div class="mb-4 rounded-lg overflow-hidden border border-purple-600/20 bg-purple-950/30 aspect-video flex items-center justify-center">
+          <img src="images/analysis/distance_plot.png" 
+               alt="Distance Analysis Plot" 
+               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: distance_plot.png</span>'">
+        </div>
+        
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+          Inter-atomic and inter-residue distance measurements throughout the simulation to track conformational changes and binding interactions.
+        </p>
+        <div class="pt-3 border-t border-white/5">
+          <span class="text-xs font-mono text-purple-400/60">Pairwise • COM • Time-series plots</span>
+        </div>
+      </div>
 
-        <!-- Service Card 5 -->
-        <div class="glass-card rounded-2xl p-8 reveal delay-200">
+      <!-- Service Card 5: Atom-Contact Analysis -->
+      <div class="glass-card rounded-2xl p-6 reveal delay-200 hover:shadow-lg hover:shadow-pink-500/10 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-4">
           <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(236,72,153,0.05)); border-color: rgba(236,72,153,0.2); color: #ec4899;">
             <span class="iconify" data-icon="mdi:circle-multiple"></span>
           </div>
-          <h3 class="text-lg font-semibold text-white mb-3">Atom-Contact Analysis</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Detailed atomic contact mapping to identify key interacting residues, hydrogen bonds, 
-            and hydrophobic contacts during the simulation.
-          </p>
-          <div class="mt-6 pt-4 border-t border-white/5">
-            <span class="text-xs font-mono text-pink-400/60">H-bonds • Contacts</span>
-          </div>
+          <h3 class="text-lg font-semibold text-white">Atom-Contact Analysis</h3>
         </div>
+        
+        <!-- YOUR IMAGE HERE: Replace with your actual contact map/H-bond plot -->
+        <div class="mb-4 rounded-lg overflow-hidden border border-pink-600/20 bg-pink-950/30 aspect-video flex items-center justify-center">
+          <img src="images/analysis/contact_map_plot.png" 
+               alt="Atom Contact Analysis Plot" 
+               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: contact_map_plot.png</span>'">
+        </div>
+        
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+          Detailed atomic contact mapping to identify key interacting residues, hydrogen bonds, and hydrophobic contacts during the simulation.
+        </p>
+        <div class="pt-3 border-t border-white/5">
+          <span class="text-xs font-mono text-pink-400/60">H-bonds • Salt bridges • Contact maps</span>
+        </div>
+      </div>
 
-        <!-- Service Card 6 -->
-        <div class="glass-card rounded-2xl p-8 reveal delay-300">
+      <!-- Service Card 6: Full Detailed Report -->
+      <div class="glass-card rounded-2xl p-6 reveal delay-300 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300">
+        <div class="flex items-center gap-3 mb-4">
           <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(6,182,212,0.15), rgba(6,182,212,0.05)); border-color: rgba(6,182,212,0.2); color: #22d3ee;">
             <span class="iconify" data-icon="mdi:file-document-outline"></span>
           </div>
-          <h3 class="text-lg font-semibold text-white mb-3">Full Detailed Report</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Comprehensive written report with methodology, results interpretation, and figures ready 
-            to be included directly in your manuscript or thesis.
-          </p>
-          <div class="mt-6 pt-4 border-t border-white/5">
-            <span class="text-xs font-mono text-cyan-400/60">PDF • Publication-ready</span>
-          </div>
+          <h3 class="text-lg font-semibold text-white">Full Detailed Report</h3>
+        </div>
+        
+        <!-- YOUR IMAGE HERE: Replace with sample report page or figure collage -->
+        <div class="mb-4 rounded-lg overflow-hidden border border-cyan-600/20 bg-cyan-950/30 aspect-video flex items-center justify-center">
+          <img src="images/analysis/report_sample.png" 
+               alt="Sample Report Page" 
+               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: report_sample.png</span>'">
+        </div>
+        
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+          Comprehensive written report with methodology, results interpretation, and figures ready to be included directly in your manuscript or thesis.
+        </p>
+        <div class="pt-3 border-t border-white/5">
+          <span class="text-xs font-mono text-cyan-400/60">PDF • DOCX • LaTeX • Figures</span>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 
   <!-- ================================================================
