@@ -437,7 +437,7 @@
     </div>
   </div>
 
-  <!-- ===== HERO ===== -->
+   <!-- ===== HERO ===== -->
   <section id="home" class="hero-bg min-h-screen flex items-center pt-16 relative">
     <div class="particle" style="top:20%; left:10%; animation: particle-float 8s ease-in-out infinite;"></div>
     <div class="particle" style="top:40%; left:80%; animation: particle-float 10s ease-in-out infinite 2s; width:6px; height:6px;"></div>
@@ -445,10 +445,11 @@
     <div class="particle" style="top:30%; left:60%; animation: particle-float 9s ease-in-out infinite 1s; width:5px; height:5px; background:rgba(89,176,255,0.3);"></div>
     <div class="particle" style="top:70%; left:70%; animation: particle-float 11s ease-in-out infinite 3s; width:3px; height:3px;"></div>
 
-    <div class="max-w-7xl mx-auto px-6 py-20 md:py-32 relative z-10 w-full">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="max-w-7xl mx-auto px-6 py-12 md:py-0 relative z-10 w-full">
+      <div class="grid md:grid-cols-2 gap-8 items-stretch min-h-[80vh]">
+
         <!-- Left Content -->
-        <div>
+        <div class="flex flex-col justify-center">
           <div class="animate-fade-up">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-600/10 border border-brand-600/20 mb-8">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -487,95 +488,92 @@
           </div>
         </div>
 
-        <!-- Right: Animated Dual Photo Showcase -->
-        <div class="hidden md:flex justify-center animate-fade-up delay-300">
-          <div class="relative w-[420px] h-[480px]">
+        <!-- Right: Full-Space Photo Slider -->
+        <div class="hidden md:block animate-fade-up delay-300">
+          <div class="relative w-full h-full min-h-[500px] rounded-2xl overflow-hidden">
 
             <!-- Background Glow -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-brand-600/15 rounded-full blur-[80px]"></div>
-            <div class="absolute top-1/4 left-1/4 w-48 h-48 bg-brand-400/10 rounded-full blur-[60px]"></div>
+            <div class="absolute -inset-10 bg-brand-600/10 rounded-full blur-[80px] pointer-events-none"></div>
 
-            <!-- Rotating Rings -->
-            <div class="w-80 h-80 rounded-full border border-brand-600/15 animate-rotate-slow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-            <div class="w-96 h-96 rounded-full border border-brand-600/8 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="animation: rotate-slow 45s linear infinite reverse;"></div>
-
-            <!-- Photo Slider Container -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[380px] rounded-2xl overflow-hidden z-10" id="heroSlider">
-
-              <!-- Photo 1 -->
-              <div class="hero-slide absolute inset-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.65,0,0.35,1)] opacity-100 translate-x-0 scale-100" data-slide="0">
-                <img src="images/pic_1.jpg" 
-                     alt="MD Simulation Workspace" 
-                     class="w-full h-full object-cover"
-                     onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=800&fit=crop'">
-                <!-- Gradient Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-transparent to-transparent opacity-70"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-[#0a0e1a]/30 to-transparent"></div>
-                <!-- Label -->
-                <div class="absolute bottom-6 left-6 right-6">
-                  <div class="px-3 py-2 rounded-lg bg-black/50 backdrop-blur-md border border-white/10">
-                    <div class="text-[10px] font-mono text-brand-300 uppercase tracking-wider mb-1">Computational Biology</div>
-                    <div class="text-sm font-semibold text-white">MD Simulation Analysis</div>
-                  </div>
+            <!-- Photo 1 -->
+            <div class="hero-slide absolute inset-0 transition-all duration-[1400ms] ease-[cubic-bezier(0.65,0,0.35,1)] opacity-100 translate-x-0 scale-100" data-slide="0">
+              <img src="images/hero_photo_1.jpg" 
+                   alt="MD Simulation Workspace" 
+                   class="w-full h-full object-cover"
+                   onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=1000&fit=crop'">
+              <!-- Overlays -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0a0e1a]/90 via-[#0a0e1a]/20 to-[#0a0e1a]/40"></div>
+              <div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#0a0e1a]/30"></div>
+              <!-- Label -->
+              <div class="absolute bottom-8 left-8 right-8">
+                <div class="px-5 py-4 rounded-xl bg-black/40 backdrop-blur-xl border border-white/10">
+                  <div class="text-[10px] font-mono text-brand-300 uppercase tracking-widest mb-1.5">Computational Biology</div>
+                  <div class="text-base font-semibold text-white">MD Simulation Analysis</div>
+                  <div class="text-xs text-slate-400 mt-1">Protein dynamics, ligand binding & more</div>
                 </div>
               </div>
+            </div>
 
-              <!-- Photo 2 -->
-              <div class="hero-slide absolute inset-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.65,0,0.35,1)] opacity-0 translate-x-[60px] scale-95" data-slide="1">
-                <img src="images/pic_2.jpg" 
-                     alt="Research Infrastructure" 
-                     class="w-full h-full object-cover"
-                     onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=800&fit=crop'">
-                <!-- Gradient Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-transparent to-transparent opacity-70"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-[#0a0e1a]/30 to-transparent"></div>
-                <!-- Label -->
-                <div class="absolute bottom-6 left-6 right-6">
-                  <div class="px-3 py-2 rounded-lg bg-black/50 backdrop-blur-md border border-white/10">
-                    <div class="text-[10px] font-mono text-emerald-300 uppercase tracking-wider mb-1">High-Performance</div>
-                    <div class="text-sm font-semibold text-white">Research Infrastructure</div>
-                  </div>
+            <!-- Photo 2 -->
+            <div class="hero-slide absolute inset-0 transition-all duration-[1400ms] ease-[cubic-bezier(0.65,0,0.35,1)] opacity-0 translate-x-[80px] scale-95" data-slide="1">
+              <img src="images/hero_photo_2.jpg" 
+                   alt="Research Infrastructure" 
+                   class="w-full h-full object-cover"
+                   onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=1000&fit=crop'">
+              <!-- Overlays -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0a0e1a]/90 via-[#0a0e1a]/20 to-[#0a0e1a]/40"></div>
+              <div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#0a0e1a]/30"></div>
+              <!-- Label -->
+              <div class="absolute bottom-8 left-8 right-8">
+                <div class="px-5 py-4 rounded-xl bg-black/40 backdrop-blur-xl border border-white/10">
+                  <div class="text-[10px] font-mono text-emerald-300 uppercase tracking-widest mb-1.5">High-Performance</div>
+                  <div class="text-base font-semibold text-white">Research Infrastructure</div>
+                  <div class="text-xs text-slate-400 mt-1">HPC cluster & advanced workstations</div>
                 </div>
               </div>
-
-              <!-- Frame Border -->
-              <div class="absolute inset-0 rounded-2xl border border-white/10 pointer-events-none z-20"></div>
-              <div class="absolute inset-0 rounded-2xl gradient-border pointer-events-none z-20"></div>
             </div>
 
-            <!-- Slide Indicators -->
-            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2.5 z-30">
-              <button class="hero-dot w-8 h-1.5 rounded-full bg-brand-400 transition-all duration-500" data-index="0" aria-label="Photo 1"></button>
-              <button class="hero-dot w-8 h-1.5 rounded-full bg-white/20 transition-all duration-500" data-index="1" aria-label="Photo 2"></button>
+            <!-- Frame Border -->
+            <div class="absolute inset-0 rounded-2xl border border-white/8 pointer-events-none z-20"></div>
+            <div class="absolute inset-0 rounded-2xl gradient-border pointer-events-none z-20"></div>
+
+            <!-- Slide Indicators (bottom-right) -->
+            <div class="absolute bottom-8 right-8 flex items-center gap-3 z-30">
+              <div class="flex gap-2">
+                <button class="hero-dot w-10 h-1.5 rounded-full bg-brand-400 transition-all duration-500" data-index="0" aria-label="Photo 1"></button>
+                <button class="hero-dot w-10 h-1.5 rounded-full bg-white/20 transition-all duration-500" data-index="1" aria-label="Photo 2"></button>
+              </div>
             </div>
 
-            <!-- Floating Badges (positioned around the photo) -->
-            <div class="absolute -top-2 -right-2 glass-card rounded-xl px-4 py-3 animate-float z-30" style="animation-delay: 0s;">
+            <!-- Floating Badges -->
+            <div class="absolute top-6 right-6 z-30 glass-card rounded-xl px-4 py-3 animate-float" style="animation-delay: 0s;">
               <div class="flex items-center gap-2">
                 <span class="iconify text-emerald-400" data-icon="mdi:check-circle"></span>
                 <span class="text-xs font-medium text-white">RMSD</span>
               </div>
             </div>
-            <div class="absolute -bottom-2 -left-2 glass-card rounded-xl px-4 py-3 animate-float z-30" style="animation-delay: 2s;">
+            <div class="absolute top-6 left-6 z-30 glass-card rounded-xl px-4 py-3 animate-float" style="animation-delay: 1.5s;">
+              <div class="flex items-center gap-2">
+                <span class="iconify text-brand-400" data-icon="mdi:molecule"></span>
+                <span class="text-xs font-medium text-white">GROMACS</span>
+              </div>
+            </div>
+            <div class="absolute top-1/2 -translate-y-1/2 -left-6 z-30 glass-card rounded-xl px-4 py-3 animate-float" style="animation-delay: 3s;">
               <div class="flex items-center gap-2">
                 <span class="iconify text-brand-400" data-icon="mdi:chart-line"></span>
                 <span class="text-xs font-medium text-white">SASA</span>
               </div>
             </div>
-            <div class="absolute top-1/3 -right-10 glass-card rounded-xl px-4 py-3 animate-float z-30" style="animation-delay: 4s;">
+            <div class="absolute top-1/2 -translate-y-1/2 -right-6 z-30 glass-card rounded-xl px-4 py-3 animate-float" style="animation-delay: 4.5s;">
               <div class="flex items-center gap-2">
                 <span class="iconify text-amber-400" data-icon="mdi:vector-polyline"></span>
                 <span class="text-xs font-medium text-white">Distance</span>
               </div>
             </div>
 
-            <!-- Center Molecule Icon (small, on top of photo) -->
-            <div class="absolute top-6 left-1/2 -translate-x-1/2 z-30 w-12 h-12 rounded-full bg-brand-950/80 border border-brand-600/30 flex items-center justify-center backdrop-blur-sm">
-              <span class="iconify text-brand-400 text-xl" data-icon="mdi:molecule"></span>
-            </div>
-
           </div>
         </div>
+
       </div>
     </div>
 
