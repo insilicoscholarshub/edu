@@ -745,7 +745,7 @@
     </div>
   </section>
 
-  <!-- ===== ANALYSIS ===== -->
+    <!-- ===== ANALYSIS ===== -->
   <section id="analysis" class="py-24 md:py-32 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/10 to-transparent pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -753,105 +753,243 @@
         <span class="text-xs font-semibold tracking-widest uppercase text-brand-400 mb-4 block">Analysis Types</span>
         <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">Publication-Grade <span class="gradient-text">Analysis</span></h2>
         <div class="section-divider"></div>
+        <p class="text-slate-400 mt-6 max-w-2xl mx-auto">Each analysis delivered as high-resolution 300 DPI plots in PNG, PDF & SVG formats — ready for journal submission.</p>
       </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="glass-card rounded-2xl p-8 reveal">
-          <div class="flex items-start gap-5">
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-600/20 to-brand-400/5 border border-brand-600/20 flex items-center justify-center shrink-0">
-              <span class="iconify text-brand-400 text-2xl" data-icon="mdi:chart-line-variant"></span>
+
+      <div class="space-y-8">
+
+        <!-- ──── 1. RMSD Analysis ──── -->
+        <div class="glass-card rounded-2xl overflow-hidden reveal">
+          <div class="grid md:grid-cols-2">
+            <!-- Image Side -->
+            <div class="relative bg-brand-950/40 border-b md:border-b-0 md:border-r border-white/5 overflow-hidden group">
+              <img src="images/analysis/rmsd_plot_1.png" 
+                   alt="RMSD Analysis Plot" 
+                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+              <!-- Floating Badge -->
+              <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
+                <span class="text-[10px] font-mono text-brand-300 uppercase tracking-wider">RMSD • Backbone + Cα</span>
+              </div>
+              <div class="absolute bottom-4 right-4 flex gap-2">
+                <span class="px-2 py-1 rounded bg-brand-600/80 text-[10px] font-semibold text-white">PNG</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">PDF</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">SVG</span>
+              </div>
             </div>
-            <div>
-              <h3 class="text-base font-semibold text-white mb-2">RMSD Analysis</h3>
-              <p class="text-sm text-slate-400 leading-relaxed mb-3">Measures the average deviation of atomic positions over time, indicating system stability and convergence. Includes backbone, C-alpha, and all-atom RMSD plots.</p>
+            <!-- Info Side -->
+            <div class="p-8 flex flex-col justify-center">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-600/20 to-brand-400/5 border border-brand-600/20 flex items-center justify-center shrink-0">
+                  <span class="iconify text-brand-400 text-2xl" data-icon="mdi:chart-line-variant"></span>
+                </div>
+                <h3 class="text-xl font-semibold text-white">RMSD Analysis</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">
+                Measures the average deviation of atomic positions over time, indicating system stability and convergence. Essential for validating that your simulation has reached equilibrium before extracting meaningful data.
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-brand-600/10 text-brand-300 border border-brand-600/20">Backbone RMSD</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-brand-600/10 text-brand-300 border border-brand-600/20">Cα RMSD</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-brand-600/10 text-brand-300 border border-brand-600/20">All-atom</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-brand-600/10 text-brand-300 border border-brand-600/20">Backbone RMSD</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-brand-600/10 text-brand-300 border border-brand-600/20">Cα RMSD</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-brand-600/10 text-brand-300 border border-brand-600/20">All-atom RMSD</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-brand-600/10 text-brand-300 border border-brand-600/20">Ligand RMSD</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="glass-card rounded-2xl p-8 reveal delay-100">
-          <div class="flex items-start gap-5">
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-600/20 to-emerald-400/5 border border-emerald-600/20 flex items-center justify-center shrink-0">
-              <span class="iconify text-emerald-400 text-2xl" data-icon="mdi:chart-bar"></span>
-            </div>
-            <div>
-              <h3 class="text-base font-semibold text-white mb-2">RMSF Analysis</h3>
-              <p class="text-sm text-slate-400 leading-relaxed mb-3">Per-residue fluctuation analysis identifying flexible loops, active site residues, and stable core regions of the protein structure during simulation.</p>
+
+        <!-- ──── 2. RMSF Analysis ──── -->
+        <div class="glass-card rounded-2xl overflow-hidden reveal">
+          <div class="grid md:grid-cols-2">
+            <!-- Info Side (left on desktop) -->
+            <div class="p-8 flex flex-col justify-center order-2 md:order-1">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-600/20 to-emerald-400/5 border border-emerald-600/20 flex items-center justify-center shrink-0">
+                  <span class="iconify text-emerald-400 text-2xl" data-icon="mdi:chart-bar"></span>
+                </div>
+                <h3 class="text-xl font-semibold text-white">RMSF Analysis</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">
+                Per-residue fluctuation analysis identifying flexible loops, active site residues, and stable core regions. RMSF correlates with B-factors from X-ray crystallography, enabling direct validation of your simulation against experimental data.
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-emerald-600/10 text-emerald-300 border border-emerald-600/20">Per-residue</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-emerald-600/10 text-emerald-300 border border-emerald-600/20">B-factor</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-emerald-600/10 text-emerald-300 border border-emerald-600/20">Flexibility map</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-emerald-600/10 text-emerald-300 border border-emerald-600/20">Per-residue RMSF</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-emerald-600/10 text-emerald-300 border border-emerald-600/20">B-factor Correlation</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-emerald-600/10 text-emerald-300 border border-emerald-600/20">Flexibility Map</span>
+              </div>
+            </div>
+            <!-- Image Side (right on desktop) -->
+            <div class="relative bg-emerald-950/30 border-b md:border-b-0 md:border-l border-white/5 overflow-hidden group order-1 md:order-2">
+              <img src="images/analysis/rmsf_plot_1.png" 
+                   alt="RMSF Analysis Plot" 
+                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+              <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
+                <span class="text-[10px] font-mono text-emerald-300 uppercase tracking-wider">RMSF • Per-residue</span>
+              </div>
+              <div class="absolute bottom-4 right-4 flex gap-2">
+                <span class="px-2 py-1 rounded bg-emerald-600/80 text-[10px] font-semibold text-white">PNG</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">PDF</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">SVG</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="glass-card rounded-2xl p-8 reveal delay-100">
-          <div class="flex items-start gap-5">
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-600/20 to-amber-400/5 border border-amber-600/20 flex items-center justify-center shrink-0">
-              <span class="iconify text-amber-400 text-2xl" data-icon="mdi:circle-slice-8"></span>
+
+        <!-- ──── 3. SASA Analysis ──── -->
+        <div class="glass-card rounded-2xl overflow-hidden reveal">
+          <div class="grid md:grid-cols-2">
+            <div class="relative bg-amber-950/30 border-b md:border-b-0 md:border-r border-white/5 overflow-hidden group">
+              <img src="images/analysis/sasa_plot_1.png" 
+                   alt="SASA Analysis Plot" 
+                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+              <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
+                <span class="text-[10px] font-mono text-amber-300 uppercase tracking-wider">SASA • Hydro + Hydrophobic</span>
+              </div>
+              <div class="absolute bottom-4 right-4 flex gap-2">
+                <span class="px-2 py-1 rounded bg-amber-600/80 text-[10px] font-semibold text-white">PNG</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">PDF</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">SVG</span>
+              </div>
             </div>
-            <div>
-              <h3 class="text-base font-semibold text-white mb-2">SASA Analysis</h3>
-              <p class="text-sm text-slate-400 leading-relaxed mb-3">Solvent-accessible surface area tracking to monitor protein folding/unfolding events, hydrophobic core exposure, and ligand binding surface changes.</p>
+            <div class="p-8 flex flex-col justify-center">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-600/20 to-amber-400/5 border border-amber-600/20 flex items-center justify-center shrink-0">
+                  <span class="iconify text-amber-400 text-2xl" data-icon="mdi:circle-slice-8"></span>
+                </div>
+                <h3 class="text-xl font-semibold text-white">SASA Analysis</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">
+                Solvent-accessible surface area tracking to monitor protein folding/unfolding events, hydrophobic core exposure, and ligand binding surface changes. Decomposed into hydrophobic and hydrophilic contributions for deeper insight.
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-amber-600/10 text-amber-300 border border-amber-600/20">Total SASA</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-amber-600/10 text-amber-300 border border-amber-600/20">Hydrophobic</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-amber-600/10 text-amber-300 border border-amber-600/20">Hydrophilic</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-amber-600/10 text-amber-300 border border-amber-600/20">Total SASA</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-amber-600/10 text-amber-300 border border-amber-600/20">Hydrophobic SASA</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-amber-600/10 text-amber-300 border border-amber-600/20">Hydrophilic SASA</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="glass-card rounded-2xl p-8 reveal delay-200">
-          <div class="flex items-start gap-5">
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600/20 to-purple-400/5 border border-purple-600/20 flex items-center justify-center shrink-0">
-              <span class="iconify text-purple-400 text-2xl" data-icon="mdi:ruler-square"></span>
-            </div>
-            <div>
-              <h3 class="text-base font-semibold text-white mb-2">Distance Analysis</h3>
-              <p class="text-sm text-slate-400 leading-relaxed mb-3">Time-resolved distance measurements between selected atoms, residues, or domains to track conformational transitions and binding pocket dynamics.</p>
+
+        <!-- ──── 4. Distance Analysis ──── -->
+        <div class="glass-card rounded-2xl overflow-hidden reveal">
+          <div class="grid md:grid-cols-2">
+            <div class="p-8 flex flex-col justify-center order-2 md:order-1">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/20 to-purple-400/5 border border-purple-600/20 flex items-center justify-center shrink-0">
+                  <span class="iconify text-purple-400 text-2xl" data-icon="mdi:ruler-square"></span>
+                </div>
+                <h3 class="text-xl font-semibold text-white">Distance Analysis</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">
+                Time-resolved distance measurements between selected atoms, residues, or domains. Critical for tracking conformational transitions, active site pocket dynamics, and ligand-protein binding stability throughout the simulation trajectory.
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-purple-600/10 text-purple-300 border border-purple-600/20">Pairwise</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-purple-600/10 text-purple-300 border border-purple-600/20">COM distance</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-purple-600/10 text-purple-300 border border-purple-600/20">Time-series</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-purple-600/10 text-purple-300 border border-purple-600/20">Pairwise Distance</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-purple-600/10 text-purple-300 border border-purple-600/20">COM Distance</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-purple-600/10 text-purple-300 border border-purple-600/20">Time-series Plot</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-purple-600/10 text-purple-300 border border-purple-600/20">Histogram</span>
+              </div>
+            </div>
+            <div class="relative bg-purple-950/30 border-b md:border-b-0 md:border-l border-white/5 overflow-hidden group order-1 md:order-2">
+              <img src="images/analysis/distance_plot_1.png" 
+                   alt="Distance Analysis Plot" 
+                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+              <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
+                <span class="text-[10px] font-mono text-purple-300 uppercase tracking-wider">Distance • Time-series</span>
+              </div>
+              <div class="absolute bottom-4 right-4 flex gap-2">
+                <span class="px-2 py-1 rounded bg-purple-600/80 text-[10px] font-semibold text-white">PNG</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">PDF</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">SVG</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="glass-card rounded-2xl p-8 reveal delay-200">
-          <div class="flex items-start gap-5">
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-pink-600/20 to-pink-400/5 border border-pink-600/20 flex items-center justify-center shrink-0">
-              <span class="iconify text-pink-400 text-2xl" data-icon="mdi:atom-variant"></span>
+
+        <!-- ──── 5. Hydrogen Bond & Atom-Contact ──── -->
+        <div class="glass-card rounded-2xl overflow-hidden reveal">
+          <div class="grid md:grid-cols-2">
+            <div class="relative bg-pink-950/30 border-b md:border-b-0 md:border-r border-white/5 overflow-hidden group">
+              <img src="images/analysis/hbond_plot_1.png" 
+                   alt="Hydrogen Bond Analysis Plot" 
+                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                   onerror="this.src='images/analysis/distance_plot_1.png'">
+              <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
+                <span class="text-[10px] font-mono text-pink-300 uppercase tracking-wider">H-bonds • Occupancy</span>
+              </div>
+              <div class="absolute bottom-4 right-4 flex gap-2">
+                <span class="px-2 py-1 rounded bg-pink-600/80 text-[10px] font-semibold text-white">PNG</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">PDF</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">SVG</span>
+              </div>
             </div>
-            <div>
-              <h3 class="text-base font-semibold text-white mb-2">Atom-Contact Analysis</h3>
-              <p class="text-sm text-slate-400 leading-relaxed mb-3">Comprehensive contact map analysis showing persistent inter-atomic contacts, hydrogen bond occupancy, and salt bridge formation throughout the simulation.</p>
+            <div class="p-8 flex flex-col justify-center">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-600/20 to-pink-400/5 border border-pink-600/20 flex items-center justify-center shrink-0">
+                  <span class="iconify text-pink-400 text-2xl" data-icon="mdi:atom-variant"></span>
+                </div>
+                <h3 class="text-xl font-semibold text-white">H-bond & Atom-Contact</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">
+                Comprehensive contact analysis showing persistent inter-atomic contacts, hydrogen bond occupancy over time, and salt bridge formation. Identifies critical interactions stabilizing protein-ligand or protein-protein complexes.
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-pink-600/10 text-pink-300 border border-pink-600/20">H-bonds</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-pink-600/10 text-pink-300 border border-pink-600/20">Salt bridges</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-pink-600/10 text-pink-300 border border-pink-600/20">Contact map</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-pink-600/10 text-pink-300 border border-pink-600/20">H-bond Count</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-pink-600/10 text-pink-300 border border-pink-600/20">H-bond Occupancy</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-pink-600/10 text-pink-300 border border-pink-600/20">Salt Bridges</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-pink-600/10 text-pink-300 border border-pink-600/20">Contact Map</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="glass-card rounded-2xl p-8 reveal delay-300">
-          <div class="flex items-start gap-5">
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-600/20 to-cyan-400/5 border border-cyan-600/20 flex items-center justify-center shrink-0">
-              <span class="iconify text-cyan-400 text-2xl" data-icon="mdi:animation-play-outline"></span>
-            </div>
-            <div>
-              <h3 class="text-base font-semibold text-white mb-2">Trajectory & Visualization</h3>
-              <p class="text-sm text-slate-400 leading-relaxed mb-3">Clustered trajectory snapshots and optional PyMOL/VMD session files for visual inspection and presentation-quality structural figures.</p>
+
+        <!-- ──── 6. Trajectory & Visualization ──── -->
+        <div class="glass-card rounded-2xl overflow-hidden reveal">
+          <div class="grid md:grid-cols-2">
+            <div class="p-8 flex flex-col justify-center order-2 md:order-1">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-600/20 to-cyan-400/5 border border-cyan-600/20 flex items-center justify-center shrink-0">
+                  <span class="iconify text-cyan-400 text-2xl" data-icon="mdi:animation-play-outline"></span>
+                </div>
+                <h3 class="text-xl font-semibold text-white">Trajectory & Visualization</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">
+                Clustered trajectory snapshots and optional PyMOL/VMD session files for visual inspection. Includes representative structure selection, principal component analysis (PCA) plots, and presentation-quality structural figures for your publication.
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">Clustering</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">PyMOL session</span>
-                <span class="text-[10px] font-mono px-2 py-1 rounded bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">Snapshots</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">Trajectory Clustering</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">PCA Plots</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">PyMOL Session</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">Structural Snapshots</span>
+              </div>
+            </div>
+            <div class="relative bg-cyan-950/30 border-b md:border-b-0 md:border-l border-white/5 overflow-hidden group order-1 md:order-2">
+              <img src="images/analysis/cluster_plot_1.png" 
+                   alt="Trajectory Clustering Plot" 
+                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                   onerror="this.src='images/analysis/rmsd_plot_1.png'">
+              <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
+                <span class="text-[10px] font-mono text-cyan-300 uppercase tracking-wider">Clustering • PCA</span>
+              </div>
+              <div class="absolute bottom-4 right-4 flex gap-2">
+                <span class="px-2 py-1 rounded bg-cyan-600/80 text-[10px] font-semibold text-white">PNG</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">PDF</span>
+                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">SVG</span>
               </div>
             </div>
           </div>
+        </div>
+
+      </div>
+      <!-- ✅ space-y-8 closed -->
+
+      <!-- Bottom Note -->
+      <div class="mt-12 text-center reveal">
+        <div class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-brand-600/5 border border-brand-600/15">
+          <span class="iconify text-brand-400 text-xl" data-icon="mdi:information-outline"></span>
+          <span class="text-sm text-slate-400">All plots delivered at <strong class="text-white">300 DPI</strong> in PNG, PDF & SVG formats with proper axis labels and color schemes</span>
         </div>
       </div>
+
     </div>
   </section>
 
